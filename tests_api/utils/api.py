@@ -96,8 +96,8 @@ class Api:
 
         result: Response = requests.get(url, params=params)
 
-        with open('resp.txt', 'a') as f:
-            f.write(f"===>{task}\n{result.text}\n{params}\n")
+#        with open('resp.txt', 'a') as f:
+#            f.write(f"===>{task}\n{result.text}\n{params}\n")
 
         dom = xml.dom.minidom.parseString(result.text)
         dom.normalize()
